@@ -1,0 +1,426 @@
+openapi: 3.0.3
+info:
+  title: SpecTrace Backend API
+  description: AI-powered product intelligence platform backend for industrial commerce.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local Development Server
+
+paths:
+  /health:
+    get:
+      summary: Health check endpoint
+      responses:
+        '200':
+          description: Server status and health metrics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/products:
+    post:
+      summary: Create product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - sku
+                - name
+              properties:
+                sku:
+                  type: string
+                  example: HC-5020
+                name:
+                  type: string
+                  example: Hydraulic Cylinder HC-5020
+                brand:
+                  type: string
+                  example: HydroTech
+                category:
+                  type: string
+                  example: Hydraulic Cylinder
+                description:
+                  type: string
+      responses:
+        '201':
+          description: Product created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '409':
+          description: Duplicate SKU
+
+    get:
+      summary: List products (paginated)
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+            default: 1
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 20
+        - in: query
+          name: search
+          schema:
+            type: string
+        - in: query
+          name: category
+          schema:
+            type: string
+        - in: query
+          name: status
+          schema:
+            type: string
+            enum: [DRAFT, PROCESSING, REVIEW_REQUIRED, APPROVED, REJECTED, ARCHIVED]
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            default: createdAt
+        - in: query
+          name: sortOrder
+          schema:
+            type: string
+            enum: [asc, desc]
+            default: desc
+      responses:
+        '200':
+          description: List of products
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/products/{id}:
+    get:
+      summary: Get product by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product details
+        '404':
+          description: Product not found
+
+    patch:
+      summary: Update product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                brand:
+                  type: string
+                category:
+                  type: string
+                description:
+                  type: string
+      responses:
+        '200':
+          description: Product updated
+
+    delete:
+      summary: Delete product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Product deleted
+
+  /api/products/{id}/documents:
+    post:
+      summary: Upload document for product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: sourceType
+          schema:
+            type: string
+            enum: [TECHNICAL_DATASHEET, MARKETING_DOCUMENT, USER_INPUT, AI_GENERATED]
+            default: USER_INPUT
+        - in: query
+          name: documentType
+          schema:
+            type: string
+            enum: [TECHNICAL_DATASHEET, MARKETING, IMAGE, CSV, OTHER]
+            default: OTHER
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: Document uploaded and attached to product
+
+    get:
+      summary: List documents for product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product documents list
+
+  /api/products/{id}/process:
+    post:
+      summary: Trigger full processing pipeline
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: Processing complete
+
+  /api/products/{id}/fields:
+    get:
+      summary: Get extracted fields for product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Extracted fields list
+
+  /api/products/{id}/evidence:
+    get:
+      summary: Get evidence records for product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Evidence records list
+
+  /api/products/{productId}/reviews/queue:
+    get:
+      summary: Get pending review queue for product
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Pending review items
+
+  /api/products/{productId}/reviews:
+    get:
+      summary: Get all review records for product
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Review history list
+
+  /api/products/{productId}/versions:
+    get:
+      summary: Get version history for product
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product version snapshots
+
+  /api/products/reviews/{reviewId}/approve:
+    post:
+      summary: Approve review item
+      parameters:
+        - in: path
+          name: reviewId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reviewedBy:
+                  type: string
+                  default: system
+                reviewNote:
+                  type: string
+      responses:
+        '200':
+          description: Review approved and version snapshot created
+
+  /api/products/reviews/{reviewId}/edit:
+    post:
+      summary: Edit review item with human correction
+      parameters:
+        - in: path
+          name: reviewId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - editedValue
+              properties:
+                editedValue:
+                  oneOf:
+                    - type: string
+                    - type: number
+                editedUnit:
+                  type: string
+                reviewedBy:
+                  type: string
+                  default: system
+                reviewNote:
+                  type: string
+      responses:
+        '200':
+          description: Review edited and version snapshot created
+
+  /api/products/reviews/{reviewId}/reject:
+    post:
+      summary: Reject review item
+      parameters:
+        - in: path
+          name: reviewId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reviewedBy:
+                  type: string
+                  default: system
+                reviewNote:
+                  type: string
+      responses:
+        '200':
+          description: Review rejected
+
+  /api/products/reviews/{reviewId}/mark-unverified:
+    post:
+      summary: Mark review field as unverified
+      parameters:
+        - in: path
+          name: reviewId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reviewedBy:
+                  type: string
+                  default: system
+                reviewNote:
+                  type: string
+      responses:
+        '200':
+          description: Field marked unverified
+
+  /api/products/{id}/export:
+    get:
+      summary: Export product data (JSON or CSV)
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: format
+          schema:
+            type: string
+            enum: [json, csv]
+            default: json
+      responses:
+        '200':
+          description: Exported product data in requested format
+
+components:
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: object
+        meta:
+          type: object

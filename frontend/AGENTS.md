@@ -1,0 +1,1 @@
+# SpecTrace Frontend Guidelines

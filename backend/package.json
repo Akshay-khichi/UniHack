@@ -1,0 +1,59 @@
+{
+  "name": "spectrace-backend",
+  "version": "1.0.0",
+  "description": "SpecTrace AI-powered product intelligence platform backend",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "typecheck": "tsc --noEmit",
+    "seed": "ts-node scripts/seed.ts",
+    "seed:knowledge": "ts-node scripts/seedKnowledge.ts",
+    "verify": "ts-node scripts/verify.ts",
+    "smoke": "ts-node scripts/smoke.ts",
+    "lint": "eslint src tests --ext .ts"
+  },
+  "keywords": [
+    "spectrace",
+    "product-intelligence",
+    "ai",
+    "backend"
+  ],
+  "author": "SpecTrace Team",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^2.17.1",
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "envalid": "^8.0.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.13.5",
+    "@types/supertest": "^6.0.2",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "node-mocks-http": "^1.18.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}
