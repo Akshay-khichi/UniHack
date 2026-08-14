@@ -160,7 +160,7 @@ export async function apiPostForm<T>(
   try {
     const res = await fetch(url.toString(), {
       method: "POST",
-      // Do not set Content-Type header when sending FormData — browser will set multipart boundary
+      // Do not set Content-Type header when sending FormData : browser will set multipart boundary
       headers: {
         Accept: "application/json",
       },
