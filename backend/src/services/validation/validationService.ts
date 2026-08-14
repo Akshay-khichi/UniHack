@@ -1,5 +1,5 @@
 /**
- * Validation Service — deterministic, no AI.
+ * Validation Service : deterministic, no AI.
  * Validates field values against constraints, ranges, and cross-field rules.
  */
 
@@ -62,7 +62,7 @@ export function validateFields(fields: FieldToValidate[]): ValidationResult {
     const numValue = typeof field.value === 'string' ? parseFloat(field.value) : field.value;
 
     if (typeof numValue !== 'number' || isNaN(numValue)) {
-      // Not a numeric value for a numeric field — warn but don't error
+      // Not a numeric value for a numeric field : warn but don't error
       warnings.push({
         field: field.canonicalName,
         code: 'NON_NUMERIC_VALUE',
@@ -72,7 +72,7 @@ export function validateFields(fields: FieldToValidate[]): ValidationResult {
       continue;
     }
 
-    // Fields with min=0 require strictly positive values — unify zero and negative under one code
+    // Fields with min=0 require strictly positive values : unify zero and negative under one code
     if (constraints.min === 0 && numValue <= 0) {
       errors.push({
         field: field.canonicalName,

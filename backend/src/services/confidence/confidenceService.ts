@@ -1,5 +1,5 @@
 /**
- * Confidence Scoring Service — deterministic.
+ * Confidence Scoring Service : deterministic.
  *
  * Confidence = f(source support, document agreement, validation, contradictions)
  * All scores bounded [0, 1].

@@ -9,26 +9,26 @@ Full backend for the SpecTrace AI-powered product intelligence platform.
 
 | Feature | Status |
 |---------|--------|
-| Product CRUD | ✅ Working |
-| Document upload (Cloudinary) | ✅ Working (requires credentials) |
-| AI Extraction (Gemini) | ✅ Working (requires API key) |
-| Normalization | ✅ Working (deterministic, no AI) |
-| Validation | ✅ Working (deterministic, no AI) |
-| Evidence storage | ✅ Working |
-| Verification (Gemini) | ✅ Working (requires API key) |
-| Contradiction engine | ✅ Working (deterministic) |
-| Confidence scoring | ✅ Working (deterministic) |
-| Quality scoring | ✅ Working (deterministic) |
-| RAG enrichment | ✅ Working (requires API key + Atlas Vector Search optional) |
-| Human review | ✅ Working |
-| Versioning | ✅ Working (immutable) |
-| Processing pipeline | ✅ Working (full orchestrator) |
-| JSON export | ✅ Working |
-| CSV export | ✅ Working |
-| HC-5020 demo seed | ✅ Working |
-| Test suite | ✅ 88/88 pass |
-| Typecheck | ✅ Clean |
-| Build | ✅ Clean |
+| Product CRUD | [YES] Working |
+| Document upload (Cloudinary) | [YES] Working (requires credentials) |
+| AI Extraction (Gemini) | [YES] Working (requires API key) |
+| Normalization | [YES] Working (deterministic, no AI) |
+| Validation | [YES] Working (deterministic, no AI) |
+| Evidence storage | [YES] Working |
+| Verification (Gemini) | [YES] Working (requires API key) |
+| Contradiction engine | [YES] Working (deterministic) |
+| Confidence scoring | [YES] Working (deterministic) |
+| Quality scoring | [YES] Working (deterministic) |
+| RAG enrichment | [YES] Working (requires API key + Atlas Vector Search optional) |
+| Human review | [YES] Working |
+| Versioning | [YES] Working (immutable) |
+| Processing pipeline | [YES] Working (full orchestrator) |
+| JSON export | [YES] Working |
+| CSV export | [YES] Working |
+| HC-5020 demo seed | [YES] Working |
+| Test suite | [YES] 88/88 pass |
+| Typecheck | [YES] Clean |
+| Build | [YES] Clean |
 
 ## What Needs Real Credentials to Test End-to-End
 

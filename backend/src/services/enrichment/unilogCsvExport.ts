@@ -75,7 +75,7 @@ export function mapToUnilogRow(
   row['MARKETING_DESCRIPTION'] = enriched.marketing_description;
   row['Product Name'] = enriched.product_name;
 
-  // Attributes — fill into ATTRIBUTE_LABEL/VALUE/UOM triplets (up to 50 slots, we fill up to 20)
+  // Attributes : fill into ATTRIBUTE_LABEL/VALUE/UOM triplets (up to 50 slots, we fill up to 20)
   enriched.attributes.forEach((attr: UnilogAttribute, i: number) => {
     if (i >= 50) return;
     const n = i + 1;

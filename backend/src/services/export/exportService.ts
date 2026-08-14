@@ -109,7 +109,7 @@ export async function exportAsCsv(productId: string): Promise<string> {
 }
 
 /**
- * CSV escape per RFC 4180 — wrap in quotes if value contains comma, quote, or newline.
+ * CSV escape per RFC 4180 : wrap in quotes if value contains comma, quote, or newline.
  */
 function csvEscape(value: string): string {
   const str = String(value ?? '');

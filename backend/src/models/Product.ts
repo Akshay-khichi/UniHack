@@ -94,7 +94,7 @@ const productSchema = new Schema<IProductDocument>(
 
 // ── Indexes ──────────────────────────────────────────────────────────────────
 
-// Indexes (sku unique index created by schema definition above — not duplicated here)
+// Indexes (sku unique index created by schema definition above : not duplicated here)
 productSchema.index({ name: 'text', description: 'text', brand: 'text' });
 productSchema.index({ category: 1 });
 productSchema.index({ status: 1 });

@@ -42,7 +42,7 @@ export async function getReviewQueue(productId: string): Promise<ReviewQueueItem
 }
 
 /**
- * Approve a review item — field status becomes FACT.
+ * Approve a review item : field status becomes FACT.
  * Creates a product version snapshot.
  */
 export async function approveReview(
@@ -84,7 +84,7 @@ export async function approveReview(
 }
 
 /**
- * Edit a review item — field updated with human-provided value, status → FACT.
+ * Edit a review item : field updated with human-provided value, status → FACT.
  */
 export async function editReview(
   reviewId: string,
@@ -145,7 +145,7 @@ export async function editReview(
 }
 
 /**
- * Reject a review item — field marked UNVERIFIED.
+ * Reject a review item : field marked UNVERIFIED.
  */
 export async function rejectReview(
   reviewId: string,

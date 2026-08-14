@@ -27,10 +27,10 @@ async function smoke(): Promise<void> {
 
   const check = (name: string, condition: boolean, detail?: string): void => {
     if (condition) {
-      logger.info({ test: name }, '✅ PASS');
+      logger.info({ test: name }, 'PASS');
       passed++;
     } else {
-      logger.error({ test: name, detail }, '❌ FAIL');
+      logger.error({ test: name, detail }, 'FAIL');
       failed++;
     }
   };

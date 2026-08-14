@@ -1,5 +1,5 @@
 /**
- * Processing Orchestrator — Phase 12
+ * Processing Orchestrator : Phase 12
  *
  * Full pipeline: INGEST → EXTRACT → NORMALIZE → VERIFY → VALIDATE
  *               → CONTRADICT → CONFIDENCE → QUALITY → ENRICH → FINALIZE
@@ -116,7 +116,7 @@ export async function processProduct(productId: string): Promise<ProcessingResul
       } else if (doc.mimeType === 'text/csv') {
         content = await response.text();
       } else {
-        // PDF/image: use URL as content reference — Gemini handles URL-referenced files
+        // PDF/image: use URL as content reference : Gemini handles URL-referenced files
         content = `[Document: ${doc.name}, URL: ${doc.url}, Type: ${doc.mimeType}]`;
       }
     } catch (err) {

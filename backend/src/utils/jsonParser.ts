@@ -3,7 +3,7 @@ import { logger } from './logger';
 /**
  * Robustly parse JSON from a Gemini response string.
  * Handles: markdown code fences, leading/trailing text, partial outputs.
- * NEVER throws — always returns a result object with success flag.
+ * NEVER throws : always returns a result object with success flag.
  */
 export function parseGeminiJson<T>(raw: string): { success: true; data: T } | { success: false; error: string; raw: string } {
   if (!raw || typeof raw !== 'string') {

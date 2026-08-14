@@ -143,7 +143,7 @@ describe('UniHack Evaluation Benchmark Service', () => {
     const report = await runUnilogEvaluation(2, 'held_out');
     expect(report.dataset_type).toBe('held_out_validation');
     expect(report.total_rows_sampled).toBeGreaterThan(0);
-    expect(report.metrics.length).toBe(5);
+    expect(report.metrics.length).toBe(6);
     expect(report.metrics.find((m) => m.category === 'Placeholder Cleaning')).toBeDefined();
     expect(report.metrics.find((m) => m.category === 'UOM Standardization')).toBeDefined();
   });

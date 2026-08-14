@@ -46,7 +46,7 @@ export async function listProducts(req: Request, res: Response, next: NextFuncti
     const query = listQuerySchema.parse(req.query);
     const { page, limit, search, category, status, sortBy, sortOrder } = query;
 
-    // Build filter — sanitized (no $where or $regex injection)
+    // Build filter : sanitized (no $where or $regex injection)
     const filter: Record<string, unknown> = {};
     if (status) filter.status = status;
     if (category) filter.category = { $regex: new RegExp(`^${escapeRegex(category)}$`, 'i') };

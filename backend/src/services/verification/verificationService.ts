@@ -32,7 +32,7 @@ const VALID_STATUSES = new Set(['VERIFIED', 'UNVERIFIED', 'CONTRADICTED']);
 
 /**
  * Verify a specific claim against its source excerpt using Gemini.
- * Never invents support — defaults to UNVERIFIED on any ambiguity or failure.
+ * Never invents support : defaults to UNVERIFIED on any ambiguity or failure.
  */
 export async function verifyEvidence(input: VerificationInput): Promise<VerificationOutput> {
   if (!isGeminiConfigured()) {

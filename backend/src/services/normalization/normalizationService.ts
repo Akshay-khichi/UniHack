@@ -1,5 +1,5 @@
 /**
- * Normalization Service — deterministic, no AI.
+ * Normalization Service : deterministic, no AI.
  * Handles: canonical field names, aliases, unit conversion, value preservation.
  */
 

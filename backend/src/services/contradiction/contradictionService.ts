@@ -1,5 +1,5 @@
 /**
- * Contradiction Engine — deterministic, no AI.
+ * Contradiction Engine : deterministic, no AI.
  *
  * Rules:
  * - NEVER delete a value
@@ -119,7 +119,7 @@ function checkConflict(a: EvidenceObservation, b: EvidenceObservation): string |
     const bNorm = normalizeNumeric(bNum, b.unit, b.canonicalName);
 
     if (aNorm === null || bNorm === null) {
-      // Can't normalize — compare raw
+      // Can't normalize : compare raw
       if (Math.abs(aNum - bNum) > NUMERIC_TOLERANCE) {
         return `Numeric values differ: ${aNum} ${a.unit || ''} vs ${bNum} ${b.unit || ''}`;
       }
@@ -142,7 +142,7 @@ function checkConflict(a: EvidenceObservation, b: EvidenceObservation): string |
     return null;
   }
 
-  // Mixed types — always a conflict
+  // Mixed types : always a conflict
   return `Type mismatch: ${typeof a.value} vs ${typeof b.value}`;
 }
 

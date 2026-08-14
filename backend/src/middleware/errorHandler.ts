@@ -48,7 +48,7 @@ export function errorHandler(
     return;
   }
 
-  // Unknown errors — log full details, return minimal info
+  // Unknown errors : log full details, return minimal info
   logger.error({ err, req: { method: req.method, url: req.url } }, 'Unhandled error');
 
   const isProd = process.env.NODE_ENV === 'production';

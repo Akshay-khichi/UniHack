@@ -113,10 +113,10 @@ export async function runUnilogEvaluation(
     limitationWarning = `Dataset size (${allRows.length} total rows) is too small for a statistically significant holdout split.`;
   }
 
-  // Classpath accuracy — only scored when ground_truth_classpath is non-empty (exact case-insensitive match)
+  // Classpath accuracy: only scored when ground_truth_classpath is non-empty (exact case-insensitive match)
   let classpathMatchCount = 0;
   let classpathTotalWithGT = 0;
-  // Classpath format validity — scored when ground_truth is absent (did the model produce a non-empty X > Y > Z path?)
+  // Classpath format validity: scored when ground_truth is absent (did the model produce a non-empty X > Y > Z path?)
   let classpathFormatValidCount = 0;
   let classpathFormatTotalNoGT = 0;
 
@@ -155,9 +155,9 @@ export async function runUnilogEvaluation(
     } catch (err) {
       totalFailedExcluded++;
       errorReason = (err as Error)?.message || 'AI enrichment failed';
-      logger.warn({ mpn, error: errorReason }, 'Evaluation benchmark row failed — excluding from metric denominator');
+      logger.warn({ mpn, error: errorReason }, 'Evaluation benchmark row failed, excluding from metric denominator');
 
-      // EXCLUDE failed rows from placeholder/UOM scoring — do not count as passed, do not count in denominator
+      // Exclude failed rows from placeholder and UOM scoring, do not count in denominator
       benchmarkRows.push({
         mpn,
         ground_truth_classpath: gtClasspath,
@@ -176,8 +176,8 @@ export async function runUnilogEvaluation(
     const rowInvoiceDesc = enriched.invoice_desc;
     const rowMobileDesc = enriched.mobile_desc;
 
-    // Classpath accuracy: only when ground truth is available — EXACT case-insensitive full-path match only.
-    // Classpath format validity: when GT is absent — model produced a non-empty multi-segment path.
+    // Classpath accuracy: only when ground truth is available, exact case-insensitive full-path match only.
+    // Classpath format validity: when GT is absent, model produced a non-empty multi-segment path.
     let cpMatched: boolean;
     if (gtClasspath.length > 0) {
       classpathTotalWithGT++;
@@ -197,7 +197,7 @@ export async function runUnilogEvaluation(
     const mobValid = rowMobileDesc.length > 0 && rowMobileDesc.length <= 80;
     if (mobValid) mobileDescValid++;
 
-    // FORMULA FIX: Only check placeholder cleaning on SUCCEEDED rows that had placeholders in raw input
+    // Only check placeholder cleaning on succeeded rows that had placeholders in raw input
     const rawBrand = row['E1_Brand'] || row['Unilog_Brand'] || row['DIB_Brand'] || '';
     const hasRawPlaceholder =
       rawBrand.includes('--') || rawBrand.toLowerCase().includes('unbranded') || rawBrand.toLowerCase().includes('n/a');
@@ -214,7 +214,7 @@ export async function runUnilogEvaluation(
       }
     }
 
-    // FORMULA FIX: Only check UOM standardization on SUCCEEDED rows with extracted attribute UOMs
+    // Only check UOM standardization on succeeded rows with extracted attribute UOMs
     if (enriched.attributes && enriched.attributes.length > 0) {
       for (const attr of enriched.attributes) {
         if (attr.uom && attr.uom.trim().length > 0) {
@@ -245,17 +245,17 @@ export async function runUnilogEvaluation(
   // Denominator is succeeded rows count (excluding failed AI calls)
   const denom = totalSucceeded;
 
-  // FORMULA VERIFICATION: score MUST equal passed / total * 100 when total > 0, 0 when total === 0
+  // Formula verification: score equals passed / total * 100 when total > 0, 0 when total === 0
   const metrics: AccuracyMetric[] = [
     {
-      // Only counts rows where a ground-truth classpath exists in the CSV; uses EXACT full-path case-insensitive match.
+      // Only counts rows where a ground-truth classpath exists in the CSV; uses exact full-path case-insensitive match.
       category: 'Taxonomy Classpath Accuracy (GT rows only)',
       score: classpathTotalWithGT > 0 ? Math.round((classpathMatchCount / classpathTotalWithGT) * 100) : 0,
       passed: classpathMatchCount,
       total: classpathTotalWithGT,
       details:
         classpathTotalWithGT === 0
-          ? 'No ground-truth classpaths found in dataset — accuracy cannot be computed'
+          ? 'No ground-truth classpaths found in dataset, accuracy cannot be computed'
           : 'Exact case-insensitive full-path match: predicted === ground_truth',
     },
     {

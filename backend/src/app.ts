@@ -11,10 +11,10 @@ import { logger } from './utils/logger';
 export function createApp(): Application {
   const app = express();
 
-  // ── Security headers ──────────────────────────────────────────────────────
+  // Security headers
   app.use(helmet());
 
-  // ── CORS — exact-origin match only ───────────────────────────────────────
+  // CORS: exact-origin match only
   const allowedOrigins: string[] = Array.isArray(env.ALLOWED_ORIGINS)
     ? env.ALLOWED_ORIGINS
     : [env.ALLOWED_ORIGINS as unknown as string];
@@ -43,11 +43,11 @@ export function createApp(): Application {
     }),
   );
 
-  // ── Body parsing ──────────────────────────────────────────────────────────
+  // Body parsing
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-  // ── Rate limiting ─────────────────────────────────────────────────────────
+  // Rate limiting
   if (env.NODE_ENV !== 'test') {
     app.use(
       rateLimit({
@@ -60,13 +60,13 @@ export function createApp(): Application {
     );
   }
 
-  // ── Routes ────────────────────────────────────────────────────────────────
+  // Routes
   app.use('/', router);
 
-  // ── 404 ───────────────────────────────────────────────────────────────────
+  // 404 handler
   app.use(notFound);
 
-  // ── Centralized error handler (must be last) ──────────────────────────────
+  // Centralized error handler (must be last)
   app.use(errorHandler);
 
   return app;

@@ -4,21 +4,21 @@ import { isGeminiConfigured } from '../src/config/gemini';
 
 async function main() {
   const isConfigured = isGeminiConfigured();
-  console.log('--- GEMINI API KEY STATUS ---');
+  console.log('[GEMINI API KEY STATUS]');
   console.log('isGeminiConfigured():', isConfigured);
   console.log('process.env.GEMINI_API_KEY present:', Boolean(process.env.GEMINI_API_KEY));
 
-  console.log('\n--- HELD-OUT VALIDATION BENCHMARK RUN (50 ROWS) ---');
+  console.log('\n[HELD-OUT VALIDATION BENCHMARK RUN (50 ROWS)]');
   const report = await runUnilogEvaluation(50, 'held_out');
 
-  console.log('\n--- INTERNAL SCORE CONSISTENCY VERIFICATION ---');
+  console.log('\n[INTERNAL SCORE CONSISTENCY VERIFICATION]');
   for (const m of report.metrics) {
     const expectedScore = m.total > 0 ? Math.round((m.passed / m.total) * 100) : 0;
     const isConsistent = m.score === expectedScore;
-    console.log(`- ${m.category}: passed=${m.passed}, total=${m.total}, score=${m.score}% (formula matched: ${isConsistent})`);
+    console.log(`${m.category}: passed=${m.passed}, total=${m.total}, score=${m.score}% (formula matched: ${isConsistent})`);
   }
 
-  console.log('\n--- FAILED ROWS REASON LOG ---');
+  console.log('\n[FAILED ROWS REASON LOG]');
   const failedRows = report.benchmark_rows.filter((r) => r.enrichment_failed);
   if (failedRows.length === 0) {
     console.log('No rows failed enrichment during this run.');
@@ -28,7 +28,7 @@ async function main() {
     });
   }
 
-  console.log('\n--- COMPLETE RAW REPORT JSON ---');
+  console.log('\n[COMPLETE RAW REPORT JSON]');
   console.log(JSON.stringify(report, null, 2));
 }
 

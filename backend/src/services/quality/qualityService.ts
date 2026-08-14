@@ -1,5 +1,5 @@
 /**
- * Quality Scoring Service — deterministic.
+ * Quality Scoring Service : deterministic.
  *
  * Quality = f(completeness, source coverage, validation, confidence, contradictions, unverified fields)
  * Score range: 0–100
