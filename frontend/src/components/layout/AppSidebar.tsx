@@ -119,11 +119,11 @@ export function AppSidebar() {
       <SidebarFooter className="border-t border-sidebar-border">
         <div className="flex items-center gap-2.5 px-1 py-1">
           <span className="grid size-8 shrink-0 place-items-center rounded-md bg-secondary text-xs font-semibold">
-            AM
+            A
           </span>
           {!collapsed && (
             <div className="min-w-0">
-              <p className="truncate text-sm font-medium">Anita Mehra</p>
+              <p className="truncate text-sm font-medium">Akshay</p>
               <p className="truncate text-[11px] text-muted-foreground">
                 HydroMax · Product Data
               </p>

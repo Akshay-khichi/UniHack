@@ -130,16 +130,16 @@ export function TopBar() {
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-9 gap-2 px-2" aria-label="User menu">
               <span className="grid size-6 place-items-center rounded-md bg-secondary text-[11px] font-semibold">
-                AM
+                A
               </span>
-              <span className="hidden text-sm font-medium lg:inline">Anita Mehra</span>
+              <span className="hidden text-sm font-medium lg:inline">Akshay</span>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
             <DropdownMenuLabel>
-              <p className="text-sm font-medium">Anita Mehra</p>
+              <p className="text-sm font-medium">Akshay</p>
               <p className="text-xs font-normal text-muted-foreground">
-                anita.mehra@hydromax.com
+                akshay@gmail.com
               </p>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
