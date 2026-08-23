@@ -42,6 +42,7 @@ class MultiKeyManager {
       { id: 1, name: 'KEY 1 (GEMINI_API_KEY)', key: process.env.GEMINI_API_KEY },
       { id: 2, name: 'KEY 2 (GEMINI_API_KEY_2)', key: process.env.GEMINI_API_KEY_2 },
       { id: 3, name: 'KEY 3 (GEMINI_API_KEY_3)', key: process.env.GEMINI_API_KEY_3 },
+      { id: 4, name: 'KEY 4 (GEMINI_API_KEY_4)', key: process.env.GEMINI_API_KEY_4 },
     ];
 
     for (const rk of rawKeys) {
