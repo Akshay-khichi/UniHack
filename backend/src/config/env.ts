@@ -19,7 +19,7 @@ export const env = cleanEnv(process.env, {
   ALLOWED_ORIGINS: commaSeparatedStr({ default: process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5173' } as any),
   MAX_FILE_SIZE_MB: num({ default: 50 }),
   RATE_LIMIT_WINDOW_MS: num({ default: 900000 }),
-  RATE_LIMIT_MAX: num({ default: 100 }),
+  RATE_LIMIT_MAX: num({ default: 10000 }),
 });
 
 // ALLOWED_ORIGINS validation in production

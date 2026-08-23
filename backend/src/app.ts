@@ -55,7 +55,7 @@ export function createApp(): Application {
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-  // Rate limiting
+  // Rate limiting (exempts unilog batch enrichment and health check routes)
   if (env.NODE_ENV !== 'test') {
     app.use(
       rateLimit({
@@ -63,6 +63,7 @@ export function createApp(): Application {
         max: env.RATE_LIMIT_MAX,
         standardHeaders: true,
         legacyHeaders: false,
+        skip: (req) => req.path.startsWith('/api/unilog') || req.path.startsWith('/health'),
         message: { success: false, error: { code: 'RATE_LIMITED', message: 'Too many requests' } },
       }),
     );
