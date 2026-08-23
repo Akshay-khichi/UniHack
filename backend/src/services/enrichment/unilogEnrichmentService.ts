@@ -67,17 +67,12 @@ function resolveBrand(row: RawProductRow): string | null {
   return null;
 }
 
-// Rate limiter: enforce minimum 4200ms between calls (~14 RPM) to stay under 15 RPM
+// Rate limiter: 0ms delay (multi-key pool distributes load automatically)
 let lastCallTimestamp = 0;
-const MIN_CALL_INTERVAL_MS = 4200;
+const MIN_CALL_INTERVAL_MS = 0;
 
 async function enforceRateLimitThrottle(): Promise<void> {
-  const now = Date.now();
-  const timeSinceLast = now - lastCallTimestamp;
-  if (timeSinceLast < MIN_CALL_INTERVAL_MS) {
-    await new Promise((r) => setTimeout(r, MIN_CALL_INTERVAL_MS - timeSinceLast));
-  }
-  lastCallTimestamp = Date.now();
+  // No delay
 }
 
 // ─── Core enrichment function ─────────────────────────────────────────────────
