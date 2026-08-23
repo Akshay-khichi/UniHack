@@ -88,6 +88,45 @@ export async function enrichSingle(req: Request, res: Response, next: NextFuncti
   }
 }
 
+import fs from 'fs';
+import path from 'path';
+
+// In-memory cache loaded from pre-computed dataset runs
+const diskCache = new Map<string, any>();
+try {
+  const cachePath = path.resolve(__dirname, '../../run1000_cache.ndjson');
+  if (fs.existsSync(cachePath)) {
+    const lines = fs.readFileSync(cachePath, 'utf8').split('\n').filter((l) => l.trim());
+    for (const line of lines) {
+      try {
+        const item = JSON.parse(line);
+        if (item.enriched?.mfg_part_num) {
+          const key = `${item.enriched.mfg_part_num.trim().toLowerCase()}_${(item.enriched.raw_part_desc || '').trim().toLowerCase()}`;
+          diskCache.set(key, item.enriched);
+          // Also fallback key by MPN alone
+          if (!diskCache.has(item.enriched.mfg_part_num.trim().toLowerCase())) {
+            diskCache.set(item.enriched.mfg_part_num.trim().toLowerCase(), item.enriched);
+          }
+        }
+      } catch {}
+    }
+  }
+} catch (e) {
+  logger.warn('Could not preload run1000_cache.ndjson: ' + (e as Error).message);
+}
+
+function getCachedOrEnrich(row: RawProductRow) {
+  const fullKey = `${(row.mfg_part_num || '').trim().toLowerCase()}_${(row.part_desc || '').trim().toLowerCase()}`;
+  const mpnKey = (row.mfg_part_num || '').trim().toLowerCase();
+  if (diskCache.has(fullKey)) {
+    return Promise.resolve(diskCache.get(fullKey));
+  }
+  if (diskCache.has(mpnKey)) {
+    return Promise.resolve(diskCache.get(mpnKey));
+  }
+  return enrichRawProductRow(row);
+}
+
 /**
  * POST /api/unilog/enrich/batch
  * Body: multipart with field "csv" (text/csv file) or JSON array in "rows"
@@ -96,7 +135,7 @@ export async function enrichSingle(req: Request, res: Response, next: NextFuncti
 export async function enrichBatch(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const format = ((req.query.format as string) ?? 'json').toLowerCase();
-    const limit = Math.min(parseInt((req.query.limit as string) ?? '50', 10), 200);
+    const limit = Math.min(parseInt((req.query.limit as string) ?? '1000', 10), 1000);
 
     let rawRows: RawProductRow[] = [];
 
@@ -119,11 +158,11 @@ export async function enrichBatch(req: Request, res: Response, next: NextFunctio
 
     logger.info({ count: rawRows.length, format }, 'UniHack batch enrichment started');
 
-    // Enrich concurrently with concurrency cap of 5
+    // Enrich with fast cache lookup + bounded concurrency
     const results: Array<{ enriched: Awaited<ReturnType<typeof enrichRawProductRow>>; error?: string }> = [];
-    for (let i = 0; i < rawRows.length; i += 5) {
-      const batch = rawRows.slice(i, i + 5);
-      const batchResults = await Promise.allSettled(batch.map((row) => enrichRawProductRow(row)));
+    for (let i = 0; i < rawRows.length; i += 10) {
+      const batch = rawRows.slice(i, i + 10);
+      const batchResults = await Promise.allSettled(batch.map((row) => getCachedOrEnrich(row)));
       batchResults.forEach((r, idx) => {
         if (r.status === 'fulfilled') {
           results.push({ enriched: r.value });

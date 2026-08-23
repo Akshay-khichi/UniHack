@@ -25,8 +25,25 @@ function gracefulShutdown(signal: string): void {
   }, 10_000);
 }
 
-server.listen(env.PORT, () => {
-  logger.info({ port: env.PORT, env: env.NODE_ENV }, 'SpecTrace backend started');
+import { connectDatabase } from './config/database';
+
+async function bootstrap() {
+  if (env.MONGODB_URI) {
+    try {
+      await connectDatabase(env.MONGODB_URI);
+    } catch (err) {
+      logger.warn('MongoDB connection failed on start — continuing with cache fallback: ' + (err as Error).message);
+    }
+  }
+
+  server.listen(env.PORT, () => {
+    logger.info({ port: env.PORT, env: env.NODE_ENV }, 'SpecTrace backend started');
+  });
+}
+
+bootstrap().catch((err) => {
+  logger.fatal({ err }, 'Failed to bootstrap SpecTrace server');
+  process.exit(1);
 });
 
 process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));

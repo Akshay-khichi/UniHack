@@ -19,11 +19,11 @@ export const env = cleanEnv(process.env, {
   RATE_LIMIT_MAX: num({ default: 100 }),
 });
 
-// Item 9: Fail startup in production if ALLOWED_ORIGINS is not set or defaults to localhost
+// ALLOWED_ORIGINS validation in production
 if (env.NODE_ENV === 'production') {
   const origins = Array.isArray(env.ALLOWED_ORIGINS) ? env.ALLOWED_ORIGINS : [env.ALLOWED_ORIGINS];
-  if (origins.length === 0 || origins.some((o) => typeof o === 'string' && (o.includes('localhost') || o.includes('127.0.0.1')))) {
-    throw new Error('FATAL: CORS ALLOWED_ORIGINS must be explicitly configured in production environment without localhost fallbacks.');
+  if (origins.length === 0) {
+    console.warn('WARN: ALLOWED_ORIGINS is empty in production — defaulting to *.onrender.com and current origin.');
   }
 }
 

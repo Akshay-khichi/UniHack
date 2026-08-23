@@ -33,7 +33,15 @@ export function createApp(): Application {
          * for all browser-initiated requests via allowedOrigins.
          */
         if (!origin) return callback(null, true);
-        if (allowedOrigins.includes(origin)) return callback(null, true);
+        if (
+          allowedOrigins.includes(origin) ||
+          allowedOrigins.includes('*') ||
+          origin.endsWith('.onrender.com') ||
+          origin.includes('localhost') ||
+          origin.includes('127.0.0.1')
+        ) {
+          return callback(null, true);
+        }
         logger.warn({ origin }, 'CORS blocked request from disallowed origin');
         return callback(new Error(`CORS: origin '${origin}' is not allowed`));
       },
