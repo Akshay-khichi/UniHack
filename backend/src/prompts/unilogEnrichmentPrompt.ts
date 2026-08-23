@@ -39,11 +39,12 @@ YOUR TASKS:
      Material, Color, Size, Weight, Diameter, Length, Width, Height, Pressure Rating,
      Temperature Rating, Connection Type, Number of [X], Sound Level, Flow Rate, Finish
 
-4. MANUFACTURER: Return the canonical manufacturer and brand names.
-   - Use proper legal casing (e.g., "Rheem Manufacturing", "FRIGIDAIRE®")
-   - If brand is unknown, use manufacturer name as brand
+4. MANUFACTURER & BRAND:
+   - Extract the TRUE product manufacturer and brand from the MPN and description (e.g. "PDSH4816AF" -> Frigidaire / Rheem Manufacturing, "49-94-0013" -> Milwaukee Tool, "3MABR-..." -> 3M, "DBDS..." -> Diablo / Freud Inc, "WDTS7024RZ" -> Whirlpool Corporation / Whirlpool®).
+   - Use proper legal casing and symbols (e.g. "FRIGIDAIRE®", "Whirlpool®", "DEWALT®", "Milwaukee®").
+   - Note that Part_Manuf often contains the distributor or cooperative name (e.g. "Appliance Dealers Cooperative", "Jam Industrial Supply"). DO NOT output the distributor as the product manufacturer or brand. If the true product brand cannot be grounded from the MPN/description, return "" (empty string).
 
-5. CONFIDENCE: For each attribute and description tier, provide a confidence score 0.0-1.0.
+5. CONFIDENCE: For each attribute, brand, and description tier, provide a confidence score 0.0-1.0.
    - 0.9-1.0: Clearly deducible from part number + description
    - 0.7-0.9: Reasonable inference from product type knowledge
    - 0.5-0.7: Uncertain, typical assumption for category

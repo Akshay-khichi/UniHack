@@ -1,3 +1,4 @@
+import * as XLSX from 'xlsx';
 import { EnrichedUnilogProduct, UnilogAttribute } from './unilogEnrichmentService';
 
 // The 252 static header columns from the official expected_output_sheet.csv
@@ -133,6 +134,28 @@ export function buildUnilogCsv(
     ),
   ];
   return csvRows.join('\r\n');
+}
+
+/**
+ * Build full UniHack 252-column XLSX Buffer from array of enriched products.
+ */
+export function buildUnilogXlsx(
+  rows: Array<{ enriched: EnrichedUnilogProduct; original?: Record<string, string> }>,
+): Buffer {
+  const dataRows = rows.map(({ enriched, original }) => {
+    const mapped = mapToUnilogRow(enriched, original);
+    const rowObj: Record<string, string> = {};
+    for (const h of UNILOG_CSV_HEADERS) {
+      rowObj[h] = mapped[h] ?? '';
+    }
+    return rowObj;
+  });
+
+  const worksheet = XLSX.utils.json_to_sheet(dataRows, { header: UNILOG_CSV_HEADERS });
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, 'Delivery Format');
+
+  return XLSX.write(workbook, { type: 'buffer', bookType: 'xlsx' }) as Buffer;
 }
 
 function csvEscape(value: string): string {

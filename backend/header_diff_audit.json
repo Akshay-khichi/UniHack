@@ -1,0 +1,1766 @@
+[
+  {
+    "index": 1,
+    "expected": "MFR URL",
+    "output": "MFR URL",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 2,
+    "expected": "Ref URL 1",
+    "output": "Ref URL 1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 3,
+    "expected": "Ref URL 2",
+    "output": "Ref URL 2",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 4,
+    "expected": "Ref URL 3",
+    "output": "Ref URL 3",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 5,
+    "expected": "Ref URL 4",
+    "output": "Ref URL 4",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 6,
+    "expected": "Ref URL 5",
+    "output": "Ref URL 5",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 7,
+    "expected": "PART_NUMBER",
+    "output": "PART_NUMBER",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 8,
+    "expected": "Dept",
+    "output": "Dept",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 9,
+    "expected": "Class",
+    "output": "Class",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 10,
+    "expected": "Fine",
+    "output": "Fine",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 11,
+    "expected": "SKU - MY_PART_NUMBER",
+    "output": "SKU - MY_PART_NUMBER",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 12,
+    "expected": "Mfg_Part_Num",
+    "output": "Mfg_Part_Num",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 13,
+    "expected": "Part_Desc",
+    "output": "Part_Desc",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 14,
+    "expected": "E1_Brand",
+    "output": "E1_Brand",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 15,
+    "expected": "Unilog_Brand",
+    "output": "Unilog_Brand",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 16,
+    "expected": "DIB_Brand",
+    "output": "DIB_Brand",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 17,
+    "expected": "Part_Manuf",
+    "output": "Part_Manuf",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 18,
+    "expected": "MANUFACTURER_NAME",
+    "output": "MANUFACTURER_NAME",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 19,
+    "expected": "BRAND_NAME",
+    "output": "BRAND_NAME",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 20,
+    "expected": "TRADE_NAME",
+    "output": "TRADE_NAME",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 21,
+    "expected": "MANUFACTURER_PART_NUMBER",
+    "output": "MANUFACTURER_PART_NUMBER",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 22,
+    "expected": "ALTERNATE_PART_NUMBER",
+    "output": "ALTERNATE_PART_NUMBER",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 23,
+    "expected": "Classpath",
+    "output": "Classpath",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 24,
+    "expected": "MOBILE_DESC",
+    "output": "MOBILE_DESC",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 25,
+    "expected": "INVOICE_DESC",
+    "output": "INVOICE_DESC",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 26,
+    "expected": "SHORT_DESC",
+    "output": "SHORT_DESC",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 27,
+    "expected": "LONG_DESC1",
+    "output": "LONG_DESC1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 28,
+    "expected": "RETAIL_DESC",
+    "output": "RETAIL_DESC",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 29,
+    "expected": "MARKETING_DESCRIPTION",
+    "output": "MARKETING_DESCRIPTION",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 30,
+    "expected": "ITEM_FEATURES_1",
+    "output": "ITEM_FEATURES_1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 31,
+    "expected": "ITEM_FEATURES_2",
+    "output": "ITEM_FEATURES_2",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 32,
+    "expected": "ITEM_FEATURES_3",
+    "output": "ITEM_FEATURES_3",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 33,
+    "expected": "ITEM_FEATURES_4",
+    "output": "ITEM_FEATURES_4",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 34,
+    "expected": "ITEM_FEATURES_5",
+    "output": "ITEM_FEATURES_5",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 35,
+    "expected": "ITEM_FEATURES_6",
+    "output": "ITEM_FEATURES_6",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 36,
+    "expected": "ITEM_FEATURES_7",
+    "output": "ITEM_FEATURES_7",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 37,
+    "expected": "ITEM_FEATURES_8",
+    "output": "ITEM_FEATURES_8",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 38,
+    "expected": "ITEM_FEATURES_9",
+    "output": "ITEM_FEATURES_9",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 39,
+    "expected": "ITEM_FEATURES_10",
+    "output": "ITEM_FEATURES_10",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 40,
+    "expected": "ITEM_FEATURES_11",
+    "output": "ITEM_FEATURES_11",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 41,
+    "expected": "ITEM_FEATURES_12",
+    "output": "ITEM_FEATURES_12",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 42,
+    "expected": "ITEM_FEATURES_13",
+    "output": "ITEM_FEATURES_13",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 43,
+    "expected": "ITEM_FEATURES_14",
+    "output": "ITEM_FEATURES_14",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 44,
+    "expected": "ITEM_FEATURES_15",
+    "output": "ITEM_FEATURES_15",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 45,
+    "expected": "ITEM_FEATURES_16",
+    "output": "ITEM_FEATURES_16",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 46,
+    "expected": "ITEM_FEATURES_17",
+    "output": "ITEM_FEATURES_17",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 47,
+    "expected": "ITEM_FEATURES_18",
+    "output": "ITEM_FEATURES_18",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 48,
+    "expected": "ITEM_FEATURES_19",
+    "output": "ITEM_FEATURES_19",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 49,
+    "expected": "ITEM_FEATURES_20",
+    "output": "ITEM_FEATURES_20",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 50,
+    "expected": "With",
+    "output": "With",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 51,
+    "expected": "Standard/Approvals",
+    "output": "Standard/Approvals",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 52,
+    "expected": "Prop 65",
+    "output": "Prop 65",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 53,
+    "expected": "Application",
+    "output": "Application",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 54,
+    "expected": "Includes",
+    "output": "Includes",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 55,
+    "expected": "Product Name",
+    "output": "Product Name",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 56,
+    "expected": "ATTRIBUTE_LABEL 1",
+    "output": "ATTRIBUTE_LABEL 1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 57,
+    "expected": "ATTRIBUTE_VALUE 1",
+    "output": "ATTRIBUTE_VALUE 1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 58,
+    "expected": "ATTRIBUTE_UOM 1",
+    "output": "ATTRIBUTE_UOM 1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 59,
+    "expected": "ATTRIBUTE_LABEL 2",
+    "output": "ATTRIBUTE_LABEL 2",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 60,
+    "expected": "ATTRIBUTE_VALUE 2",
+    "output": "ATTRIBUTE_VALUE 2",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 61,
+    "expected": "ATTRIBUTE_UOM 2",
+    "output": "ATTRIBUTE_UOM 2",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 62,
+    "expected": "ATTRIBUTE_LABEL 3",
+    "output": "ATTRIBUTE_LABEL 3",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 63,
+    "expected": "ATTRIBUTE_VALUE 3",
+    "output": "ATTRIBUTE_VALUE 3",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 64,
+    "expected": "ATTRIBUTE_UOM 3",
+    "output": "ATTRIBUTE_UOM 3",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 65,
+    "expected": "ATTRIBUTE_LABEL 4",
+    "output": "ATTRIBUTE_LABEL 4",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 66,
+    "expected": "ATTRIBUTE_VALUE 4",
+    "output": "ATTRIBUTE_VALUE 4",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 67,
+    "expected": "ATTRIBUTE_UOM 4",
+    "output": "ATTRIBUTE_UOM 4",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 68,
+    "expected": "ATTRIBUTE_LABEL 5",
+    "output": "ATTRIBUTE_LABEL 5",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 69,
+    "expected": "ATTRIBUTE_VALUE 5",
+    "output": "ATTRIBUTE_VALUE 5",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 70,
+    "expected": "ATTRIBUTE_UOM 5",
+    "output": "ATTRIBUTE_UOM 5",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 71,
+    "expected": "ATTRIBUTE_LABEL 6",
+    "output": "ATTRIBUTE_LABEL 6",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 72,
+    "expected": "ATTRIBUTE_VALUE 6",
+    "output": "ATTRIBUTE_VALUE 6",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 73,
+    "expected": "ATTRIBUTE_UOM 6",
+    "output": "ATTRIBUTE_UOM 6",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 74,
+    "expected": "ATTRIBUTE_LABEL 7",
+    "output": "ATTRIBUTE_LABEL 7",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 75,
+    "expected": "ATTRIBUTE_VALUE 7",
+    "output": "ATTRIBUTE_VALUE 7",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 76,
+    "expected": "ATTRIBUTE_UOM 7",
+    "output": "ATTRIBUTE_UOM 7",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 77,
+    "expected": "ATTRIBUTE_LABEL 8",
+    "output": "ATTRIBUTE_LABEL 8",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 78,
+    "expected": "ATTRIBUTE_VALUE 8",
+    "output": "ATTRIBUTE_VALUE 8",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 79,
+    "expected": "ATTRIBUTE_UOM 8",
+    "output": "ATTRIBUTE_UOM 8",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 80,
+    "expected": "ATTRIBUTE_LABEL 9",
+    "output": "ATTRIBUTE_LABEL 9",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 81,
+    "expected": "ATTRIBUTE_VALUE 9",
+    "output": "ATTRIBUTE_VALUE 9",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 82,
+    "expected": "ATTRIBUTE_UOM 9",
+    "output": "ATTRIBUTE_UOM 9",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 83,
+    "expected": "ATTRIBUTE_LABEL 10",
+    "output": "ATTRIBUTE_LABEL 10",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 84,
+    "expected": "ATTRIBUTE_VALUE 10",
+    "output": "ATTRIBUTE_VALUE 10",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 85,
+    "expected": "ATTRIBUTE_UOM 10",
+    "output": "ATTRIBUTE_UOM 10",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 86,
+    "expected": "ATTRIBUTE_LABEL 11",
+    "output": "ATTRIBUTE_LABEL 11",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 87,
+    "expected": "ATTRIBUTE_VALUE 11",
+    "output": "ATTRIBUTE_VALUE 11",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 88,
+    "expected": "ATTRIBUTE_UOM 11",
+    "output": "ATTRIBUTE_UOM 11",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 89,
+    "expected": "ATTRIBUTE_LABEL 12",
+    "output": "ATTRIBUTE_LABEL 12",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 90,
+    "expected": "ATTRIBUTE_VALUE 12",
+    "output": "ATTRIBUTE_VALUE 12",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 91,
+    "expected": "ATTRIBUTE_UOM 12",
+    "output": "ATTRIBUTE_UOM 12",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 92,
+    "expected": "ATTRIBUTE_LABEL 13",
+    "output": "ATTRIBUTE_LABEL 13",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 93,
+    "expected": "ATTRIBUTE_VALUE 13",
+    "output": "ATTRIBUTE_VALUE 13",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 94,
+    "expected": "ATTRIBUTE_UOM 13",
+    "output": "ATTRIBUTE_UOM 13",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 95,
+    "expected": "ATTRIBUTE_LABEL 14",
+    "output": "ATTRIBUTE_LABEL 14",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 96,
+    "expected": "ATTRIBUTE_VALUE 14",
+    "output": "ATTRIBUTE_VALUE 14",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 97,
+    "expected": "ATTRIBUTE_UOM 14",
+    "output": "ATTRIBUTE_UOM 14",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 98,
+    "expected": "ATTRIBUTE_LABEL 15",
+    "output": "ATTRIBUTE_LABEL 15",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 99,
+    "expected": "ATTRIBUTE_VALUE 15",
+    "output": "ATTRIBUTE_VALUE 15",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 100,
+    "expected": "ATTRIBUTE_UOM 15",
+    "output": "ATTRIBUTE_UOM 15",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 101,
+    "expected": "ATTRIBUTE_LABEL 16",
+    "output": "ATTRIBUTE_LABEL 16",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 102,
+    "expected": "ATTRIBUTE_VALUE 16",
+    "output": "ATTRIBUTE_VALUE 16",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 103,
+    "expected": "ATTRIBUTE_UOM 16",
+    "output": "ATTRIBUTE_UOM 16",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 104,
+    "expected": "ATTRIBUTE_LABEL 17",
+    "output": "ATTRIBUTE_LABEL 17",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 105,
+    "expected": "ATTRIBUTE_VALUE 17",
+    "output": "ATTRIBUTE_VALUE 17",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 106,
+    "expected": "ATTRIBUTE_UOM 17",
+    "output": "ATTRIBUTE_UOM 17",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 107,
+    "expected": "ATTRIBUTE_LABEL 18",
+    "output": "ATTRIBUTE_LABEL 18",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 108,
+    "expected": "ATTRIBUTE_VALUE 18",
+    "output": "ATTRIBUTE_VALUE 18",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 109,
+    "expected": "ATTRIBUTE_UOM 18",
+    "output": "ATTRIBUTE_UOM 18",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 110,
+    "expected": "ATTRIBUTE_LABEL 19",
+    "output": "ATTRIBUTE_LABEL 19",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 111,
+    "expected": "ATTRIBUTE_VALUE 19",
+    "output": "ATTRIBUTE_VALUE 19",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 112,
+    "expected": "ATTRIBUTE_UOM 19",
+    "output": "ATTRIBUTE_UOM 19",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 113,
+    "expected": "ATTRIBUTE_LABEL 20",
+    "output": "ATTRIBUTE_LABEL 20",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 114,
+    "expected": "ATTRIBUTE_VALUE 20",
+    "output": "ATTRIBUTE_VALUE 20",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 115,
+    "expected": "ATTRIBUTE_UOM 20",
+    "output": "ATTRIBUTE_UOM 20",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 116,
+    "expected": "ATTRIBUTE_LABEL 21",
+    "output": "ATTRIBUTE_LABEL 21",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 117,
+    "expected": "ATTRIBUTE_VALUE 21",
+    "output": "ATTRIBUTE_VALUE 21",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 118,
+    "expected": "ATTRIBUTE_UOM 21",
+    "output": "ATTRIBUTE_UOM 21",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 119,
+    "expected": "ATTRIBUTE_LABEL 22",
+    "output": "ATTRIBUTE_LABEL 22",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 120,
+    "expected": "ATTRIBUTE_VALUE 22",
+    "output": "ATTRIBUTE_VALUE 22",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 121,
+    "expected": "ATTRIBUTE_UOM 22",
+    "output": "ATTRIBUTE_UOM 22",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 122,
+    "expected": "ATTRIBUTE_LABEL 23",
+    "output": "ATTRIBUTE_LABEL 23",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 123,
+    "expected": "ATTRIBUTE_VALUE 23",
+    "output": "ATTRIBUTE_VALUE 23",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 124,
+    "expected": "ATTRIBUTE_UOM 23",
+    "output": "ATTRIBUTE_UOM 23",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 125,
+    "expected": "ATTRIBUTE_LABEL 24",
+    "output": "ATTRIBUTE_LABEL 24",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 126,
+    "expected": "ATTRIBUTE_VALUE 24",
+    "output": "ATTRIBUTE_VALUE 24",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 127,
+    "expected": "ATTRIBUTE_UOM 24",
+    "output": "ATTRIBUTE_UOM 24",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 128,
+    "expected": "ATTRIBUTE_LABEL 25",
+    "output": "ATTRIBUTE_LABEL 25",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 129,
+    "expected": "ATTRIBUTE_VALUE 25",
+    "output": "ATTRIBUTE_VALUE 25",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 130,
+    "expected": "ATTRIBUTE_UOM 25",
+    "output": "ATTRIBUTE_UOM 25",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 131,
+    "expected": "ATTRIBUTE_LABEL 26",
+    "output": "ATTRIBUTE_LABEL 26",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 132,
+    "expected": "ATTRIBUTE_VALUE 26",
+    "output": "ATTRIBUTE_VALUE 26",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 133,
+    "expected": "ATTRIBUTE_UOM 26",
+    "output": "ATTRIBUTE_UOM 26",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 134,
+    "expected": "ATTRIBUTE_LABEL 27",
+    "output": "ATTRIBUTE_LABEL 27",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 135,
+    "expected": "ATTRIBUTE_VALUE 27",
+    "output": "ATTRIBUTE_VALUE 27",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 136,
+    "expected": "ATTRIBUTE_UOM 27",
+    "output": "ATTRIBUTE_UOM 27",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 137,
+    "expected": "ATTRIBUTE_LABEL 28",
+    "output": "ATTRIBUTE_LABEL 28",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 138,
+    "expected": "ATTRIBUTE_VALUE 28",
+    "output": "ATTRIBUTE_VALUE 28",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 139,
+    "expected": "ATTRIBUTE_UOM 28",
+    "output": "ATTRIBUTE_UOM 28",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 140,
+    "expected": "ATTRIBUTE_LABEL 29",
+    "output": "ATTRIBUTE_LABEL 29",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 141,
+    "expected": "ATTRIBUTE_VALUE 29",
+    "output": "ATTRIBUTE_VALUE 29",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 142,
+    "expected": "ATTRIBUTE_UOM 29",
+    "output": "ATTRIBUTE_UOM 29",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 143,
+    "expected": "ATTRIBUTE_LABEL 30",
+    "output": "ATTRIBUTE_LABEL 30",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 144,
+    "expected": "ATTRIBUTE_VALUE 30",
+    "output": "ATTRIBUTE_VALUE 30",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 145,
+    "expected": "ATTRIBUTE_UOM 30",
+    "output": "ATTRIBUTE_UOM 30",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 146,
+    "expected": "ATTRIBUTE_LABEL 31",
+    "output": "ATTRIBUTE_LABEL 31",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 147,
+    "expected": "ATTRIBUTE_VALUE 31",
+    "output": "ATTRIBUTE_VALUE 31",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 148,
+    "expected": "ATTRIBUTE_UOM 31",
+    "output": "ATTRIBUTE_UOM 31",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 149,
+    "expected": "ATTRIBUTE_LABEL 32",
+    "output": "ATTRIBUTE_LABEL 32",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 150,
+    "expected": "ATTRIBUTE_VALUE 32",
+    "output": "ATTRIBUTE_VALUE 32",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 151,
+    "expected": "ATTRIBUTE_UOM 32",
+    "output": "ATTRIBUTE_UOM 32",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 152,
+    "expected": "ATTRIBUTE_LABEL 33",
+    "output": "ATTRIBUTE_LABEL 33",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 153,
+    "expected": "ATTRIBUTE_VALUE 33",
+    "output": "ATTRIBUTE_VALUE 33",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 154,
+    "expected": "ATTRIBUTE_UOM 33",
+    "output": "ATTRIBUTE_UOM 33",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 155,
+    "expected": "ATTRIBUTE_LABEL 34",
+    "output": "ATTRIBUTE_LABEL 34",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 156,
+    "expected": "ATTRIBUTE_VALUE 34",
+    "output": "ATTRIBUTE_VALUE 34",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 157,
+    "expected": "ATTRIBUTE_UOM 34",
+    "output": "ATTRIBUTE_UOM 34",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 158,
+    "expected": "ATTRIBUTE_LABEL 35",
+    "output": "ATTRIBUTE_LABEL 35",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 159,
+    "expected": "ATTRIBUTE_VALUE 35",
+    "output": "ATTRIBUTE_VALUE 35",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 160,
+    "expected": "ATTRIBUTE_UOM 35",
+    "output": "ATTRIBUTE_UOM 35",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 161,
+    "expected": "ATTRIBUTE_LABEL 36",
+    "output": "ATTRIBUTE_LABEL 36",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 162,
+    "expected": "ATTRIBUTE_VALUE 36",
+    "output": "ATTRIBUTE_VALUE 36",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 163,
+    "expected": "ATTRIBUTE_UOM 36",
+    "output": "ATTRIBUTE_UOM 36",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 164,
+    "expected": "ATTRIBUTE_LABEL 37",
+    "output": "ATTRIBUTE_LABEL 37",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 165,
+    "expected": "ATTRIBUTE_VALUE 37",
+    "output": "ATTRIBUTE_VALUE 37",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 166,
+    "expected": "ATTRIBUTE_UOM 37",
+    "output": "ATTRIBUTE_UOM 37",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 167,
+    "expected": "ATTRIBUTE_LABEL 38",
+    "output": "ATTRIBUTE_LABEL 38",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 168,
+    "expected": "ATTRIBUTE_VALUE 38",
+    "output": "ATTRIBUTE_VALUE 38",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 169,
+    "expected": "ATTRIBUTE_UOM 38",
+    "output": "ATTRIBUTE_UOM 38",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 170,
+    "expected": "ATTRIBUTE_LABEL 39",
+    "output": "ATTRIBUTE_LABEL 39",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 171,
+    "expected": "ATTRIBUTE_VALUE 39",
+    "output": "ATTRIBUTE_VALUE 39",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 172,
+    "expected": "ATTRIBUTE_UOM 39",
+    "output": "ATTRIBUTE_UOM 39",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 173,
+    "expected": "ATTRIBUTE_LABEL 40",
+    "output": "ATTRIBUTE_LABEL 40",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 174,
+    "expected": "ATTRIBUTE_VALUE 40",
+    "output": "ATTRIBUTE_VALUE 40",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 175,
+    "expected": "ATTRIBUTE_UOM 40",
+    "output": "ATTRIBUTE_UOM 40",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 176,
+    "expected": "ATTRIBUTE_LABEL 41",
+    "output": "ATTRIBUTE_LABEL 41",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 177,
+    "expected": "ATTRIBUTE_VALUE 41",
+    "output": "ATTRIBUTE_VALUE 41",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 178,
+    "expected": "ATTRIBUTE_UOM 41",
+    "output": "ATTRIBUTE_UOM 41",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 179,
+    "expected": "ATTRIBUTE_LABEL 42",
+    "output": "ATTRIBUTE_LABEL 42",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 180,
+    "expected": "ATTRIBUTE_VALUE 42",
+    "output": "ATTRIBUTE_VALUE 42",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 181,
+    "expected": "ATTRIBUTE_UOM 42",
+    "output": "ATTRIBUTE_UOM 42",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 182,
+    "expected": "ATTRIBUTE_LABEL 43",
+    "output": "ATTRIBUTE_LABEL 43",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 183,
+    "expected": "ATTRIBUTE_VALUE 43",
+    "output": "ATTRIBUTE_VALUE 43",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 184,
+    "expected": "ATTRIBUTE_UOM 43",
+    "output": "ATTRIBUTE_UOM 43",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 185,
+    "expected": "ATTRIBUTE_LABEL 44",
+    "output": "ATTRIBUTE_LABEL 44",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 186,
+    "expected": "ATTRIBUTE_VALUE 44",
+    "output": "ATTRIBUTE_VALUE 44",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 187,
+    "expected": "ATTRIBUTE_UOM 44",
+    "output": "ATTRIBUTE_UOM 44",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 188,
+    "expected": "ATTRIBUTE_LABEL 45",
+    "output": "ATTRIBUTE_LABEL 45",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 189,
+    "expected": "ATTRIBUTE_VALUE 45",
+    "output": "ATTRIBUTE_VALUE 45",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 190,
+    "expected": "ATTRIBUTE_UOM 45",
+    "output": "ATTRIBUTE_UOM 45",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 191,
+    "expected": "ATTRIBUTE_LABEL 46",
+    "output": "ATTRIBUTE_LABEL 46",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 192,
+    "expected": "ATTRIBUTE_VALUE 46",
+    "output": "ATTRIBUTE_VALUE 46",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 193,
+    "expected": "ATTRIBUTE_UOM 46",
+    "output": "ATTRIBUTE_UOM 46",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 194,
+    "expected": "ATTRIBUTE_LABEL 47",
+    "output": "ATTRIBUTE_LABEL 47",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 195,
+    "expected": "ATTRIBUTE_VALUE 47",
+    "output": "ATTRIBUTE_VALUE 47",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 196,
+    "expected": "ATTRIBUTE_UOM 47",
+    "output": "ATTRIBUTE_UOM 47",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 197,
+    "expected": "ATTRIBUTE_LABEL 48",
+    "output": "ATTRIBUTE_LABEL 48",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 198,
+    "expected": "ATTRIBUTE_VALUE 48",
+    "output": "ATTRIBUTE_VALUE 48",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 199,
+    "expected": "ATTRIBUTE_UOM 48",
+    "output": "ATTRIBUTE_UOM 48",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 200,
+    "expected": "ATTRIBUTE_LABEL 49",
+    "output": "ATTRIBUTE_LABEL 49",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 201,
+    "expected": "ATTRIBUTE_VALUE 49",
+    "output": "ATTRIBUTE_VALUE 49",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 202,
+    "expected": "ATTRIBUTE_UOM 49",
+    "output": "ATTRIBUTE_UOM 49",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 203,
+    "expected": "ATTRIBUTE_LABEL 50",
+    "output": "ATTRIBUTE_LABEL 50",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 204,
+    "expected": "ATTRIBUTE_VALUE 50",
+    "output": "ATTRIBUTE_VALUE 50",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 205,
+    "expected": "ATTRIBUTE_UOM 50",
+    "output": "ATTRIBUTE_UOM 50",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 206,
+    "expected": "UPC",
+    "output": "UPC",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 207,
+    "expected": "EAN",
+    "output": "EAN",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 208,
+    "expected": "GTIN",
+    "output": "GTIN",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 209,
+    "expected": "UNSPSC",
+    "output": "UNSPSC",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 210,
+    "expected": "Warranty",
+    "output": "Warranty",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 211,
+    "expected": "List Price",
+    "output": "List Price",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 212,
+    "expected": "Selling Qty",
+    "output": "Selling Qty",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 213,
+    "expected": "Selling UOM",
+    "output": "Selling UOM",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 214,
+    "expected": "Standard Packaging Information",
+    "output": "Standard Packaging Information",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 215,
+    "expected": "LENGTH",
+    "output": "LENGTH",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 216,
+    "expected": "LENGTH_UOM",
+    "output": "LENGTH_UOM",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 217,
+    "expected": "HEIGHT",
+    "output": "HEIGHT",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 218,
+    "expected": "HEIGHT_UOM",
+    "output": "HEIGHT_UOM",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 219,
+    "expected": "WIDTH",
+    "output": "WIDTH",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 220,
+    "expected": "WIDTH_UOM",
+    "output": "WIDTH_UOM",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 221,
+    "expected": "WEIGHT",
+    "output": "WEIGHT",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 222,
+    "expected": "WEIGHT_UOM",
+    "output": "WEIGHT_UOM",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 223,
+    "expected": "VOLUME",
+    "output": "VOLUME",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 224,
+    "expected": "VOLUME_UOM",
+    "output": "VOLUME_UOM",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 225,
+    "expected": "Product Image",
+    "output": "Product Image",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 226,
+    "expected": "Alternate Image 1",
+    "output": "Alternate Image 1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 227,
+    "expected": "Alternate Image 2",
+    "output": "Alternate Image 2",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 228,
+    "expected": "Alternate Image 3",
+    "output": "Alternate Image 3",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 229,
+    "expected": "Alternate Image 4",
+    "output": "Alternate Image 4",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 230,
+    "expected": "SDS",
+    "output": "SDS",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 231,
+    "expected": "SDS_1",
+    "output": "SDS_1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 232,
+    "expected": "Warranty Information",
+    "output": "Warranty Information",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 233,
+    "expected": "Catalog",
+    "output": "Catalog",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 234,
+    "expected": "Specification Sheet",
+    "output": "Specification Sheet",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 235,
+    "expected": "Instruction/Installation Manual",
+    "output": "Instruction/Installation Manual",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 236,
+    "expected": "Service Manual",
+    "output": "Service Manual",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 237,
+    "expected": "Owners/User Manual",
+    "output": "Owners/User Manual",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 238,
+    "expected": "Line Drawing",
+    "output": "Line Drawing",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 239,
+    "expected": "MTR",
+    "output": "MTR",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 240,
+    "expected": "RoHS",
+    "output": "RoHS",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 241,
+    "expected": "Full Engineering Drawing",
+    "output": "Full Engineering Drawing",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 242,
+    "expected": "Energy Star Guide",
+    "output": "Energy Star Guide",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 243,
+    "expected": "Technical Bulletin",
+    "output": "Technical Bulletin",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 244,
+    "expected": "Submittal",
+    "output": "Submittal",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 245,
+    "expected": "Compatibility Chart",
+    "output": "Compatibility Chart",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 246,
+    "expected": "Size Chart",
+    "output": "Size Chart",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 247,
+    "expected": "Product Label/Insert",
+    "output": "Product Label/Insert",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 248,
+    "expected": "Video Link",
+    "output": "Video Link",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 249,
+    "expected": "Video Link 1",
+    "output": "Video Link 1",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 250,
+    "expected": "Country Of Origin",
+    "output": "Country Of Origin",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 251,
+    "expected": "Discontinued",
+    "output": "Discontinued",
+    "present": "Y",
+    "typeMatch": "Y"
+  },
+  {
+    "index": 252,
+    "expected": "Actual Image (Yes/No)",
+    "output": "Actual Image (Yes/No)",
+    "present": "Y",
+    "typeMatch": "Y"
+  }
+]

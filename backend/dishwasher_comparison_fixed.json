@@ -1,0 +1,392 @@
+[
+  {
+    "field": "MFR URL",
+    "expected": "https://www.frigidaire.com/en/p/owner-center/product-support/PDSH4816AF",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "PART_NUMBER",
+    "expected": "20887830",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Dept",
+    "expected": "Appliances",
+    "generated": "Appliances",
+    "status": "MATCH"
+  },
+  {
+    "field": "Class",
+    "expected": "Large Appliances",
+    "generated": "Kitchen Appliances",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Fine",
+    "expected": "Dishwashers",
+    "generated": "Built-In Dishwashers",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "SKU - MY_PART_NUMBER",
+    "expected": "1515863",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Mfg_Part_Num",
+    "expected": "PDSH4816AF",
+    "generated": "PDSH4816AF",
+    "status": "MATCH"
+  },
+  {
+    "field": "Part_Desc",
+    "expected": "PDSH4816AF Dishwasher SS - Display Only",
+    "generated": "PDSH4816AF Dishwasher SS - Display Only",
+    "status": "MATCH"
+  },
+  {
+    "field": "E1_Brand",
+    "expected": "-- Unbranded --",
+    "generated": "-- Unbranded --",
+    "status": "MATCH"
+  },
+  {
+    "field": "Unilog_Brand",
+    "expected": "-- No Unilog Brand --",
+    "generated": "-- No Unilog Brand --",
+    "status": "MATCH"
+  },
+  {
+    "field": "DIB_Brand",
+    "expected": "-- No DIB Brand --",
+    "generated": "-- No DIB Brand --",
+    "status": "MATCH"
+  },
+  {
+    "field": "Part_Manuf",
+    "expected": "Appliance Dealers Cooperative (APPDE)",
+    "generated": "Appliance Dealers Cooperative (APPDE)",
+    "status": "MATCH"
+  },
+  {
+    "field": "MANUFACTURER_NAME",
+    "expected": "Rheem Manufacturing",
+    "generated": "Electrolux Home Products",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "BRAND_NAME",
+    "expected": "FRIGIDAIRE®",
+    "generated": "FRIGIDAIRE®",
+    "status": "MATCH"
+  },
+  {
+    "field": "MANUFACTURER_PART_NUMBER",
+    "expected": "PDSH4816AF",
+    "generated": "PDSH4816AF",
+    "status": "MATCH"
+  },
+  {
+    "field": "Classpath",
+    "expected": "Appliances & Consumer Electronics>Kitchen Appliances>Built-In Dishwashers",
+    "generated": "Appliances & Consumer Electronics > Kitchen Appliances > Built-In Dishwashers",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "MOBILE_DESC",
+    "expected": "Rheem Manufacturing FRIGIDAIRE, Dishwasher, Professional Series, PDSH4816AF",
+    "generated": "FRIGIDAIRE Professional Series Dishwasher, Stainless Steel, PDSH4816AF",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "INVOICE_DESC",
+    "expected": "DISHWASHER LEG 5 SST 120V 15A 50-1/4IN",
+    "generated": "FRIGIDAIRE PDSH4816AF DISHWASHER SS",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "SHORT_DESC",
+    "expected": "FRIGIDAIRE® Professional Series PDSH4816AF Dishwasher With CleanBoost™, Leg Mounting, 5-Wash Cycle, Stainless Steel",
+    "generated": "FRIGIDAIRE® Professional Series PDSH4816AF Built-In Dishwasher, Stainless Steel",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "LONG_DESC1",
+    "expected": "FRIGIDAIRE® Dishwasher With CleanBoost™, Professional Series, 5 Wash Cycles, 120 V, 15 A, Leg Mounting, 24 in W x 24-1/4 in D, 50-1/4 in Depth With Door Open, 8-1/2 in Upper Rack, 11-1/4 in Lower Rack Minimum Height, 10-3/8 in Upper Rack, 13-1/4 in Lower Rack Maximum Height, 47 dBA Sound Level, Stainless Steel, Additional Information: 240 kW-hr Annual Energy, 1 to 12 hr Delay Start Hours",
+    "generated": "FRIGIDAIRE® Professional Series PDSH4816AF built-in dishwasher featuring a stainless steel finish and premium wash performance. Designed for modern kitchens with durable construction and efficient cleaning cycles.",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "RETAIL_DESC",
+    "expected": "Professional Series Dishwasher, Leg Mounting, 5-Wash Cycle, Stainless Steel",
+    "generated": "FRIGIDAIRE® Professional Series PDSH4816AF Built-In Dishwasher, Stainless Steel",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "MARKETING_DESCRIPTION",
+    "expected": "",
+    "generated": "Upgrade your kitchen with the Frigidaire Professional Series built-in dishwasher. Featuring a sleek stainless steel design and advanced cleaning performance, this dishwasher ensures your dishes come out sparkling clean every time.",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "With",
+    "expected": "With CleanBoost™",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Standard/Approvals",
+    "expected": "ASSE 1006|CEE Tier 2 Qualified|cUL Listed|ENERGY STAR Certified|NSF Certified|UL Listed",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Product Name",
+    "expected": "Dishwasher",
+    "generated": "Dishwasher",
+    "status": "MATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 1",
+    "expected": "Series",
+    "generated": "Series",
+    "status": "MATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 1",
+    "expected": "Professional Series",
+    "generated": "Professional Series",
+    "status": "MATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 2",
+    "expected": "Model",
+    "generated": "Model",
+    "status": "MATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 2",
+    "expected": "",
+    "generated": "PDSH4816AF",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 3",
+    "expected": "Number of Wash Cycles",
+    "generated": "Material",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 3",
+    "expected": "5",
+    "generated": "Stainless Steel",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 4",
+    "expected": "Voltage Rating",
+    "generated": "Color",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 4",
+    "expected": "120",
+    "generated": "Stainless Steel",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_UOM 4",
+    "expected": "V",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 5",
+    "expected": "Amperage Rating",
+    "generated": "Mounting Type",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 5",
+    "expected": "15",
+    "generated": "Built-In",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_UOM 5",
+    "expected": "A",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 6",
+    "expected": "Mounting Type",
+    "generated": "Item Type",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 6",
+    "expected": "Leg",
+    "generated": "Dishwasher",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 7",
+    "expected": "Plug Type",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 8",
+    "expected": "Size",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 8",
+    "expected": "24 in W x 24-1/4 in D",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 9",
+    "expected": "Depth With Door Open",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 9",
+    "expected": "50-1/4",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_UOM 9",
+    "expected": "in",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 10",
+    "expected": "Minimum Height",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 10",
+    "expected": "8-1/2 in Upper Rack, 11-1/4 in Lower Rack",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 11",
+    "expected": "Maximum Height",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 11",
+    "expected": "10-3/8 in Upper Rack, 13-1/4 in Lower Rack",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 12",
+    "expected": "Sound Level",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 12",
+    "expected": "47",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_UOM 12",
+    "expected": "dBA",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 13",
+    "expected": "Material",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 13",
+    "expected": "Stainless Steel",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 14",
+    "expected": "Color",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 15",
+    "expected": "Additional Information",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 15",
+    "expected": "240 kW-hr Annual Energy, 1 to 12 hr Delay Start Hours",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Warranty",
+    "expected": "1 Year Manufacturer, 1 Year Labor and Parts",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Product Image",
+    "expected": "FRIGIDAIRE_PDSH4816AF.jpg",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Alternate Image 1",
+    "expected": "FRIGIDAIRE_PDSH4816AF_1.jpg",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Alternate Image 2",
+    "expected": "FRIGIDAIRE_PDSH4816AF_2.jpg",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Alternate Image 3",
+    "expected": "FRIGIDAIRE_PDSH4816AF_3.jpg",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Alternate Image 4",
+    "expected": "FRIGIDAIRE_PDSH4816AF_4.jpg",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Specification Sheet",
+    "expected": "FRIGIDAIRE_PDSH4816AF_Specification_Sheet.pdf",
+    "generated": "",
+    "status": "MISMATCH"
+  },
+  {
+    "field": "Actual Image (Yes/No)",
+    "expected": "Yes",
+    "generated": "No",
+    "status": "MISMATCH"
+  }
+]

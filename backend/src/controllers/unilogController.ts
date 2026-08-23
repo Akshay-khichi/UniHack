@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 import { enrichRawProductRow, parseRawCsvRow, RawProductRow } from '../services/enrichment/unilogEnrichmentService';
-import { buildUnilogCsv, UNILOG_CSV_HEADERS } from '../services/enrichment/unilogCsvExport';
+import { buildUnilogCsv, buildUnilogXlsx, UNILOG_CSV_HEADERS } from '../services/enrichment/unilogCsvExport';
 import { sendSuccess } from '../utils/apiResponse';
 import { AppError } from '../utils/AppError';
 import { logger } from '../utils/logger';
@@ -154,6 +154,14 @@ export async function enrichBatch(req: Request, res: Response, next: NextFunctio
       res.setHeader('Content-Type', 'text/csv');
       res.setHeader('Content-Disposition', 'attachment; filename="unilog-enriched.csv"');
       res.status(200).send(csv);
+      return;
+    }
+
+    if (format === 'xlsx') {
+      const xlsxBuffer = buildUnilogXlsx(results.map((r) => ({ enriched: r.enriched })));
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      res.setHeader('Content-Disposition', 'attachment; filename="unilog-enriched.xlsx"');
+      res.status(200).send(xlsxBuffer);
       return;
     }
 

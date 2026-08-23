@@ -1,0 +1,176 @@
+[
+  {
+    "field": "Dept",
+    "row783_red": "Tools & Shop Supplies",
+    "row784_green": "Tools & Shop Supplies",
+    "differs": "NO"
+  },
+  {
+    "field": "Class",
+    "row783_red": "Hand Tools",
+    "row784_green": "Hand Tools",
+    "differs": "NO"
+  },
+  {
+    "field": "Fine",
+    "row783_red": "Aviation Snips",
+    "row784_green": "Aviation Snips",
+    "differs": "NO"
+  },
+  {
+    "field": "Mfg_Part_Num",
+    "row783_red": "AVM6EV",
+    "row784_green": "AVM6EV",
+    "differs": "NO"
+  },
+  {
+    "field": "Part_Desc",
+    "row783_red": "AVM6 EV Mini Snip Red",
+    "row784_green": "AVM7 EV Mini Snip Green",
+    "differs": "YES"
+  },
+  {
+    "field": "E1_Brand",
+    "row783_red": "-- Unbranded --",
+    "row784_green": "-- Unbranded --",
+    "differs": "NO"
+  },
+  {
+    "field": "Unilog_Brand",
+    "row783_red": "-- No Unilog Brand --",
+    "row784_green": "-- No Unilog Brand --",
+    "differs": "NO"
+  },
+  {
+    "field": "DIB_Brand",
+    "row783_red": "-- No DIB Brand --",
+    "row784_green": "-- No DIB Brand --",
+    "differs": "NO"
+  },
+  {
+    "field": "Part_Manuf",
+    "row783_red": "Malco Prod (2370)",
+    "row784_green": "Malco Prod (2370)",
+    "differs": "NO"
+  },
+  {
+    "field": "MANUFACTURER_NAME",
+    "row783_red": "Malco Products",
+    "row784_green": "Malco Products, Inc.",
+    "differs": "YES"
+  },
+  {
+    "field": "BRAND_NAME",
+    "row783_red": "MALCO®",
+    "row784_green": "Malco®",
+    "differs": "YES"
+  },
+  {
+    "field": "MANUFACTURER_PART_NUMBER",
+    "row783_red": "AVM6EV",
+    "row784_green": "AVM6EV",
+    "differs": "NO"
+  },
+  {
+    "field": "Classpath",
+    "row783_red": "Tools & Shop Supplies > Hand Tools > Aviation Snips",
+    "row784_green": "Tools & Shop Supplies > Hand Tools > Aviation Snips",
+    "differs": "NO"
+  },
+  {
+    "field": "MOBILE_DESC",
+    "row783_red": "MALCO Aviation Snip, Mini, Red, AVM6EV",
+    "row784_green": "Malco AVM6EV Aviation Snip, Green, Mini Snip",
+    "differs": "YES"
+  },
+  {
+    "field": "INVOICE_DESC",
+    "row783_red": "MALCO AVM6EV MINI SNIP RED",
+    "row784_green": "MALCO AVM6EV MINI SNIP GREEN",
+    "differs": "YES"
+  },
+  {
+    "field": "SHORT_DESC",
+    "row783_red": "MALCO® AVM6EV Mini Aviation Snip, Red",
+    "row784_green": "Malco® AVM6EV Aviation Snip, Mini Snip, Green",
+    "differs": "YES"
+  },
+  {
+    "field": "LONG_DESC1",
+    "row783_red": "MALCO® Mini Aviation Snip, AVM6EV, Red Handle, Compact Design, Precision Cutting, Durable Construction",
+    "row784_green": "Malco® AVM6EV Mini Snip Aviation Snip, Green, designed for precision sheet metal cutting and tight radius curves with durable construction and ergonomic grips.",
+    "differs": "YES"
+  },
+  {
+    "field": "RETAIL_DESC",
+    "row783_red": "MALCO® AVM6EV Mini Aviation Snip, Red",
+    "row784_green": "Malco® AVM6EV Aviation Snip, Mini Snip, Green",
+    "differs": "YES"
+  },
+  {
+    "field": "MARKETING_DESCRIPTION",
+    "row783_red": "The Malco AVM6EV Mini Snip in red is engineered for precision cutting in tight spaces. Featuring a compact design and durable construction, it delivers reliable performance for professional tradespeople and DIYers alike.",
+    "row784_green": "Get precise, clean cuts in tight spaces with the Malco AVM6EV Mini Snip. Featuring a vibrant green handle for easy identification and a compact design, these aviation snips offer superior control and durability for professional metalwork.",
+    "differs": "YES"
+  },
+  {
+    "field": "Product Name",
+    "row783_red": "Mini Aviation Snip",
+    "row784_green": "Aviation Snip",
+    "differs": "YES"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 1",
+    "row783_red": "Series",
+    "row784_green": "Series",
+    "differs": "NO"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 1",
+    "row783_red": "AVM6",
+    "row784_green": "AVM",
+    "differs": "YES"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 2",
+    "row783_red": "Model",
+    "row784_green": "Model",
+    "differs": "NO"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 2",
+    "row783_red": "AVM6EV",
+    "row784_green": "AVM6EV",
+    "differs": "NO"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 3",
+    "row783_red": "Color",
+    "row784_green": "Color",
+    "differs": "NO"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 3",
+    "row783_red": "Red",
+    "row784_green": "Green",
+    "differs": "YES"
+  },
+  {
+    "field": "ATTRIBUTE_LABEL 4",
+    "row783_red": "Tool Type",
+    "row784_green": "Tool Type",
+    "differs": "NO"
+  },
+  {
+    "field": "ATTRIBUTE_VALUE 4",
+    "row783_red": "Mini Snip",
+    "row784_green": "Mini Snip",
+    "differs": "NO"
+  },
+  {
+    "field": "Actual Image (Yes/No)",
+    "row783_red": "No",
+    "row784_green": "No",
+    "differs": "NO"
+  }
+]

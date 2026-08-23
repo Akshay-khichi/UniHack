@@ -67,6 +67,19 @@ function resolveBrand(row: RawProductRow): string | null {
   return null;
 }
 
+// Rate limiter: enforce minimum 4200ms between calls (~14 RPM) to stay under 15 RPM
+let lastCallTimestamp = 0;
+const MIN_CALL_INTERVAL_MS = 4200;
+
+async function enforceRateLimitThrottle(): Promise<void> {
+  const now = Date.now();
+  const timeSinceLast = now - lastCallTimestamp;
+  if (timeSinceLast < MIN_CALL_INTERVAL_MS) {
+    await new Promise((r) => setTimeout(r, MIN_CALL_INTERVAL_MS - timeSinceLast));
+  }
+  lastCallTimestamp = Date.now();
+}
+
 // ─── Core enrichment function ─────────────────────────────────────────────────
 
 export async function enrichRawProductRow(
@@ -84,14 +97,16 @@ export async function enrichRawProductRow(
 RAW PRODUCT ROW:
 - Mfg_Part_Num: ${row.mfg_part_num}
 - Part_Desc: ${row.part_desc}
-- Part_Manuf: ${manufName}
-- Cleaned_Brand: ${resolvedBrand ?? 'Unknown — use manufacturer name as brand'}`;
+- Part_Manuf (Supplier/Distributor): ${manufName}
+- Cleaned_Brand: ${resolvedBrand ?? 'Unknown'}`;
 
   const model = getExtractionModel();
   let lastError: Error | null = null;
 
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= 4; attempt++) {
     try {
+      await enforceRateLimitThrottle();
+
       const result = await Promise.race([
         model.generateContent(prompt),
         new Promise<never>((_, reject) =>
@@ -105,7 +120,7 @@ RAW PRODUCT ROW:
       if (!parsed.success) {
         logger.warn({ attempt, error: parsed.error }, 'UniHack enrichment: malformed JSON, retrying');
         lastError = new Error(parsed.error);
-        if (attempt < 3) await new Promise((r) => setTimeout(r, 1000 * attempt));
+        if (attempt < 4) await new Promise((r) => setTimeout(r, 2000 * attempt));
         continue;
       }
 
@@ -123,7 +138,22 @@ RAW PRODUCT ROW:
         }))
         .filter((a: UnilogAttribute) => a.label && a.value);
 
-      // Determine human review flag (spec: trigger review when ANY attribute confidence < 0.6 or overall < 0.6)
+      // Resolve true product manufacturer and brand — never default to distributor
+      const rawDistributor = manufName.trim().toLowerCase();
+      let extractedManuf = d.manufacturer_name ? String(d.manufacturer_name).trim() : '';
+      let extractedBrand = d.brand_name ? String(d.brand_name).trim() : (resolvedBrand ?? '');
+
+      if (extractedManuf.toLowerCase() === rawDistributor && !row.part_desc.toLowerCase().includes(rawDistributor)) {
+        extractedManuf = '';
+      }
+      if (extractedBrand.toLowerCase() === rawDistributor && !row.part_desc.toLowerCase().includes(rawDistributor)) {
+        extractedBrand = '';
+      }
+
+      const isManufUngrounded = !extractedManuf;
+      const isBrandUngrounded = !extractedBrand;
+
+      // Determine human review flag (trigger review when ANY attribute confidence < 0.6, overall < 0.6, or brand/manuf ungrounded)
       const overallConf = Number(d.overall_confidence ?? 0.7);
       const lowConfAttributes = attributes.filter((a) => a.confidence < 0.6);
       const hasAnyLowConfAttribute = lowConfAttributes.length > 0;
@@ -131,14 +161,18 @@ RAW PRODUCT ROW:
       const needsReview =
         Boolean(d.needs_human_review) ||
         overallConf < 0.6 ||
-        hasAnyLowConfAttribute;
+        hasAnyLowConfAttribute ||
+        isManufUngrounded ||
+        isBrandUngrounded;
 
       const reviewReasons: string[] = [];
       if (d.review_reason) reviewReasons.push(String(d.review_reason));
       if (overallConf < 0.6) reviewReasons.push(`Overall confidence (${overallConf.toFixed(2)}) is below 0.6 threshold`);
       if (hasAnyLowConfAttribute) {
-        reviewReasons.push(`Contains ${lowConfAttributes.length} attribute(s) (${lowConfAttributes.map((a) => a.label).join(', ')}) below 0.6 confidence threshold`);
+        reviewReasons.push(`Contains ${lowConfAttributes.length} attribute(s) below 0.6 confidence threshold`);
       }
+      if (isManufUngrounded) reviewReasons.push('Manufacturer is ungroundable from input');
+      if (isBrandUngrounded) reviewReasons.push('Brand is ungroundable from input');
 
       // Enforce Invoice desc constraints (≤40 chars, ALL CAPS)
       let invoiceDesc = String(d.invoice_desc ?? '').toUpperCase();
@@ -147,8 +181,8 @@ RAW PRODUCT ROW:
       return {
         mfg_part_num: row.mfg_part_num,
         raw_part_desc: row.part_desc,
-        manufacturer_name: String(d.manufacturer_name ?? manufName),
-        brand_name: String(d.brand_name ?? resolvedBrand ?? manufName),
+        manufacturer_name: extractedManuf,
+        brand_name: extractedBrand,
         classpath: String(d.classpath ?? ''),
         dept: String(d.dept ?? ''),
         class_name: String(d.class ?? ''),
@@ -167,8 +201,17 @@ RAW PRODUCT ROW:
       };
     } catch (err) {
       lastError = err as Error;
-      logger.warn({ attempt, error: (err as Error).message }, 'UniHack enrichment attempt failed');
-      if (attempt < 3) await new Promise((r) => setTimeout(r, 1000 * attempt));
+      const errMsg = (err as Error).message || '';
+      logger.warn({ attempt, error: errMsg }, 'UniHack enrichment attempt failed');
+
+      // Handle 429 rate limit backoff specifically
+      if (errMsg.includes('429') || errMsg.includes('RESOURCE_EXHAUSTED')) {
+        const backoffWait = 42000;
+        logger.warn({ attempt, backoffWait }, 'Rate limit encountered, backing off for quota window');
+        await new Promise((r) => setTimeout(r, backoffWait));
+      } else if (attempt < 4) {
+        await new Promise((r) => setTimeout(r, 2000 * attempt));
+      }
     }
   }
 

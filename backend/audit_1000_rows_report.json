@@ -1,0 +1,45 @@
+{
+  "total_rows": 1000,
+  "valid_parse_count": 1000,
+  "parse_errors": [],
+  "sample_tested": 50,
+  "sample_success": 43,
+  "sample_failed": 7,
+  "sample_failed_details": [
+    {
+      "row": 31,
+      "mpn": "49-94-0117",
+      "error": "External service error: UniHack enrichment"
+    },
+    {
+      "row": 32,
+      "mpn": "49-94-0123",
+      "error": "External service error: UniHack enrichment"
+    },
+    {
+      "row": 33,
+      "mpn": "49-94-0023",
+      "error": "External service error: UniHack enrichment"
+    },
+    {
+      "row": 34,
+      "mpn": "49-94-0121",
+      "error": "External service error: UniHack enrichment"
+    },
+    {
+      "row": 35,
+      "mpn": "49-94-0127",
+      "error": "External service error: UniHack enrichment"
+    },
+    {
+      "row": 36,
+      "mpn": "49-94-0137",
+      "error": "External service error: UniHack enrichment"
+    },
+    {
+      "row": 37,
+      "mpn": "49-94-0160",
+      "error": "External service error: UniHack enrichment"
+    }
+  ]
+}
