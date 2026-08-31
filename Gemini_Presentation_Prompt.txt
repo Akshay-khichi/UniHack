@@ -1,0 +1,118 @@
+You are an expert AI Solutions Architect and Hackathon Presentation Designer. I am uploading the official UniHack 15-slide presentation template for our project: "SpecTrace — AI-Powered Product Intelligence for Industrial Commerce".
+
+Please populate all 15 slides of the template with complete, high-impact, professional content based on the exact project details below. Ensure every slide title, bullet point, diagram description, and technical specification matches the provided structure with zero placeholders.
+
+================================================================================
+PROJECT INFORMATION & SLIDE CONTENT
+================================================================================
+
+SLIDE 1: GUIDELINES
+(Template instruction slide — leave as default)
+
+SLIDE 2: TITLE & TEAM DETAILS
+- Project Title: SpecTrace: AI-Powered Product Intelligence for Industrial Commerce
+- Subtitle: Automated End-to-End Enrichment & 252-Column Schema Delivery Pipeline
+- Team Name: [Insert Team Name]
+- Team Leader Name: Akshay Khichi
+- Track: Unilog Product Content Enrichment Challenge
+
+SLIDE 3: BRIEF ABOUT YOUR SOLUTION
+- Solution Summary: SpecTrace is an automated product content enrichment engine designed for industrial distributors. It bridges the gap between messy, incomplete supplier feeds and search-ready e-commerce catalogs.
+- Core Capabilities:
+  1. Ingestion & Pre-processing: Cleans unstandardized distributor inputs, resolves placeholder brand tags, and normalizes cryptic abbreviations.
+  2. 3-Tier Taxonomy & 5-Tier Copy Engine: Automatically maps products to standard Department > Class > Fine taxonomy hierarchies while generating ERP and e-commerce descriptions (Invoice <=40 chars ALL CAPS, Mobile 60-80 chars, Short, Long, and Marketing copy).
+  3. 252-Column Enterprise Compliance: Populates all 252 canonical delivery headers with zero schema deviations, verified across 1,000 catalog items with 100% completion in both CSV and XLSX formats.
+
+SLIDE 4: CORE QUESTIONS
+1. How does your solution enrich minimal product information?
+   - Multi-Layer Entity Extraction: Parses cryptic part descriptions (dimensions, materials, tolerances, series numbers) using structured LLM reasoning and regex normalization.
+   - True Brand & Manufacturer Disambiguation: Extracts authentic product brand identities (e.g. 'FRIGIDAIRE®') while preventing distributor contamination (e.g. 'Appliance Dealers Cooperative').
+   - Deep Technical Attribute Extraction: Populates up to 50 structured attribute slots with normalized values and standardized Units of Measure (UOM).
+2. How does your solution ensure accuracy and trust in the generated product data?
+   - Multi-Factor Confidence Scoring: Evaluates data completeness, source coverage, attribute-level confidence, and taxonomy consistency.
+   - Self-Consistency Guardrails: Flags ungrounded attributes or missing manufacturer identities for automated human review queue placement.
+   - Deterministic 252-Header Diffing: Guarantees 100% exact match against the canonical Unilog delivery format (0 missing, 0 extra, 0 renamed).
+3. What makes your solution scalable for enterprise product catalogs?
+   - Multi-Key High-Throughput Engine: Dynamic API pool with independent 15 RPM pacing, automated daily quota rotation, and zero-loss crash resilience.
+   - Row-Index Persistent Caching: NDJSON storage enables instantaneous lookup, interrupted-run recovery, and zero duplicate API consumption.
+   - Modular Model-Agnostic Core: Seamlessly scales from cloud LLMs (Gemini 3.5 Flash) to private on-premise models for millions of SKUs.
+
+SLIDE 5: OPPORTUNITIES
+a. How different is it from existing ideas?
+   - Solves Real Industrial Data Anomalies: Correctly handles duplicate MPNs with differing descriptions (e.g. AVM6EV Red vs Green Mini Snips) with row-level independent parsing rather than naive key collisions.
+   - Strict 252-Column Schema Delivery: Produces production-ready CSV and multi-sheet XLSX exports adhering to enterprise distributor guidelines.
+   - Hybrid Architecture: Combines deterministic rule-based cleaners with generative AI reasoning to eliminate hallucinations.
+b. How will it solve the problem statement?
+   - Automates the complete 8-stage Unilog enrichment lifecycle: Input Ingestion -> Taxonomy Classification -> Attribute Extraction -> Brand Cleansing -> 5-Tier Description Building -> Schema Formatting.
+c. USP of Proposed Solution:
+   - 100% Automated 252-Column Generator with built-in brand disambiguation and multi-key quota load balancing.
+
+SLIDE 6: LIST OF FEATURES OFFERED BY THE SOLUTION
+1. 3-Level Automated Taxonomy Classification (Dept, Class, Fine Classpath)
+2. 5-Tier Description Generator (Invoice <=40 chars, Mobile 60-80 chars, Short, Long, Marketing)
+3. Structured Attribute & UOM Normalizer (fractional inch conversions, metric standardization)
+4. Distributor vs. Manufacturer Disambiguation Engine
+5. Multi-Key API Round-Robin Pool with Automated Quota Rotation
+6. Deterministic 252-Header Schema Validator (Zero column drift)
+7. Self-Consistency Confidence Scoring & Automated Human Review Queue
+8. In-Memory Preloaded Cache for Instant Millisecond UI Performance
+9. Dual-Format Delivery Exporter (Formatted CSV and native multi-sheet XLSX)
+10. Web Dashboard & Interactive Review Interface for Catalog Curation
+
+SLIDE 7: PROCESS FLOW DIAGRAM
+Raw Distributor Feed (6 Columns)
+  -> Stage 1: Ingestion & Row-Index Persistence (NDJSON Cache)
+  -> Stage 2: Pre-Processing & Brand Disambiguation
+  -> Stage 3: Multi-Key LLM Reasoning Engine (Taxonomy + Attributes + 5-Tier Copy)
+  -> Stage 4: Rule-Based Cleansing & UOM Normalization
+  -> Stage 5: Self-Consistency Confidence Scoring & Review Flagging
+  -> Stage 6: Canonical 252-Column Schema Alignment
+  -> Final Output (1,000 Verified Rows in CSV & XLSX)
+
+SLIDE 8: WIREFRAMES / MOCK DIAGRAMS OF THE PROPOSED SOLUTION
+UI Dashboard Structure:
+- Top Navigation: Quick status KPIs, Global search, Theme toggle (Light/Dark).
+- Left Sidebar: Dashboard, Products, Add Product, Review Queue, Catalog, UniHack Enrichment.
+- Main Workspace:
+  - Drag-and-Drop CSV Ingestion Area with sample dataset loader.
+  - Interactive Product Selection Table with live batch progress.
+  - Side-by-Side Product Inspector displaying Classpath, 5-Tier Descriptions, and Attribute badges with confidence scores.
+  - One-click 'Download 252-Column CSV' and 'Download XLSX' action buttons.
+
+SLIDE 9: ARCHITECTURE DIAGRAM
+- Client Tier: React 18 / TanStack Router / TailwindCSS / Radix UI Components
+- API Tier: Node.js Express Backend / TypeScript REST Endpoints (/api/unilog/enrich, /api/products, /api/reviews)
+- Processing Layer: Multi-Key Manager (4 Gemini API credentials), Pacing Controller, JSON Extraction Engine, UOM Normalizer
+- Storage & Delivery: In-Memory Dataset Cache + NDJSON File Persistence, Canonical 252-Header Mapping Engine, XLSX/CSV Generators
+
+SLIDE 10: TECHNOLOGIES USED IN THE SOLUTION
+- Frontend: React 18, Vite, TypeScript, TanStack Router, TanStack Table, Tailwind CSS, Lucide Icons
+- Backend: Node.js, Express, TypeScript, @google/genai SDK (Gemini 3.5 Flash / Flash Lite), Zod, xlsx, Pino
+- Deployment & Infrastructure: Render Cloud Deployment, GitHub Actions, NDJSON Local Cache Storage
+
+SLIDE 11: ESTIMATED IMPLEMENTATION COST (OPTIONAL)
+- Cloud Web Hosting: ~$7 - $25 / month (Render Starter / AWS ECS)
+- AI Model Inference Costs: ~$0.075 per 1,000 enriched products using Gemini 3.5 Flash Lite (~$7.50 per 100,000 SKUs)
+- Unit Economics: ~$0.0001 per enriched product record (>95% operational cost reduction vs. manual catalog curation)
+
+SLIDE 12: SNAPSHOTS OF THE MVP
+- Slide Layout:
+  1. Top-Left: UniHack Batch Enrichment View (1,000 rows loaded, 100% Succeeded, 0 Failed, 93.3% Avg Confidence).
+  2. Top-Right: Enriched Product Inspector (5-tier descriptions, classpath hierarchy, attribute table with confidence tags).
+  3. Bottom-Left: Enterprise Catalog Governance Dashboard (Quality metrics, data completeness, recent products).
+  4. Bottom-Right: Final 252-Column Delivery Excel Spreadsheet (output_delivery_format.xlsx).
+
+SLIDE 13: ADDITIONAL DETAILS / FUTURE DEVELOPMENT
+1. Automated Web Crawling of OEM Manufacturer Datasheets for deep mechanical/electrical specifications.
+2. Computer Vision Pipeline for product image cropping, optimization, and dimensional drawing classification.
+3. Direct Enterprise ERP/PIM Connectors (Akeneo, Pimcore, SAP, Shopify Plus).
+4. Custom List of Values (LOV) Validation Engine against enterprise ERP master taxonomies.
+
+SLIDE 14: PROJECT LINKS
+1. GitHub Public Repository: https://github.com/Akshay-khichi/UniHack
+2. Demo Video Link (3 Minutes): [Insert your YouTube Unlisted / Google Drive Link]
+3. Working Prototype Link: https://unihack-nyab.onrender.com
+
+SLIDE 15: THANK YOU
+- SpecTrace / UniHack: AI-Powered Product Intelligence for Industrial Commerce
+- Thank You! / Q&A
